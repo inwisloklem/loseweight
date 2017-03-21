@@ -1,0 +1,30 @@
+@font-face
+  font-weight: 400
+  font-style: normal
+  font-family: "Roboto Slab"
+  src: local("Roboto Slab Regular"), local("RobotoSlab-Regular"), url("../fonts/robotoslabregular.woff2") format("woff2"), url("../fonts/robotoslabregular.woff") format("woff")
+
+@font-face
+  font-weight: 300
+  font-style: normal
+  font-family: "Roboto"
+  src: local("Roboto Light"), local("Roboto-Light"), url("../fonts/robotolight.woff2") format("woff2"), url("../fonts/robotolight.woff") format("woff")
+
+@font-face
+  font-weight: 500
+  font-style: normal
+  font-family: "Roboto"
+  src: local("Roboto Medium"), local("Roboto-Medium"), url("../fonts/robotomedium.woff2") format("woff2"), url("../fonts/robotomedium.woff") format("woff")
+
+$font-title = "Roboto Slab", serif
+$font-text = "Roboto", sans-serif
+
+font($size, $height = normal, $weight = 300, $transform = none)
+  font-size: $size
+  font-weight: $weight
+
+  if $height != "normal"
+    line-height: $height
+
+  if $transform != "none"
+    text-transform: $transform

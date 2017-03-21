@@ -1,0 +1,71 @@
+.intro
+  padding: 40px 0
+  background-color: $primary-color-dark
+
+  @media $desktop
+    background-image: url("../img/background-intro.jpg")
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+
+  &__title
+    margin-bottom: 10px
+    text-align: center
+    color: $primary-color-text
+    font(2.5em, 1.2)
+
+  &__stripe
+    display: inline-block
+    padding: 5px 10px
+    background-color: $primary-color
+    
+  &__fn
+    margin-bottom: 40px
+    text-align: center
+    color: $primary-color-text
+    font(1em, 1.2, 300)
+
+  &__wrapper
+    display: flex
+    flex-direction: column
+
+    @media $desktop
+      flex-direction: row
+
+  &__form
+    margin: auto
+
+    @media $desktop
+      margin-right: 0
+      margin-left: auto
+
+  &__list
+    margin: auto
+    margin-bottom: 20px
+    max-width: 500px
+    list-style-type: none
+    color: $primary-color-text
+    text-transform: uppercase
+    font(1.2em, 1.2, 300)
+
+    @media $desktop
+      display: flex
+      flex-direction: column
+      flex-basis: 50%
+      justify-content: center
+      margin: 0
+
+  &__item
+    margin-bottom: 20px
+    padding-left: 40px
+    background-image: url("../img/list-point-white.png")
+    background-repeat: no-repeat
+
+    @media $tablet
+      margin-bottom: 20px
+
+    @media $desktop
+      margin-bottom: 60px
+
+      &:last-of-type
+        margin-bottom: 0

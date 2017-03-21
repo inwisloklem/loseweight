@@ -1,0 +1,101 @@
+.about
+  position: relative
+  padding: 40px 0
+  text-align: center
+  background-color: $primary-color
+
+  padding-top: 75px
+  @media $tablet-desktop
+    padding-top: 110px
+
+  &__title
+    margin-bottom: 10px
+    text-align: center
+    color: $primary-color-text
+    font(2.5em, 1.2)
+
+  &__list
+    list-style-type: none
+    text-align: left
+    color: $primary-color-text
+    font(1.2em, 1.2, 300)
+    
+    @media $tablet-desktop
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+
+  &__item
+    box-sizing: border-box
+    position: relative
+    padding: 64px
+    padding-right: 0
+    padding-left: 148px
+    flex-basis: 50%
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    
+    @media $tablet-desktop
+      padding-right: 10px
+
+    &::before
+      position: absolute
+      top: 50%
+      left: 0
+      display: block
+      width: 128px
+      height: 128px
+      background-color: $primary-color-dark
+      background-size: 100%
+      border-radius: 50%
+      content: ""
+
+      transform: translateY(-50%)
+
+    &--icon-1
+      &::before
+        background-image: url("../img/about-icon-1.png")
+
+    &--icon-2
+      &::before
+        background-image: url("../img/about-icon-2.png")
+
+    &--icon-3
+      &::before
+        background-image: url("../img/about-icon-3.png")
+
+    &--icon-4
+      &::before
+        background-image: url("../img/about-icon-4.png")
+
+    &--icon-5
+      &::before
+        background-image: url("../img/about-icon-5.png")
+
+    &--icon-6
+      &::before
+        background-image: url("../img/about-icon-6.png")
+
+  &__hide
+    display: none
+    
+    @media $tablet-desktop
+      display: inline
+
+  &__btn
+    display: inline-block
+
+  &::after
+    position: absolute
+    z-index: 5
+    bottom: -35px
+    display: block
+    border-top: 35px solid $primary-color
+    border-right: calc(50vw - 8px) solid transparent
+    border-left: calc(50vw - 8px) solid transparent
+    content: ""
+    
+    @media $tablet-desktop
+      bottom: -70px
+      border-top-width: 70px

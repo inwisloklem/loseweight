@@ -1,0 +1,75 @@
+.massm
+  position: relative
+  padding: 40px 0
+  text-align: center
+  background-color: $primary-color-text
+
+  padding-top: 75px
+  @media $tablet-desktop
+    padding-top: 110px
+
+  &__title
+    margin-bottom: 20px
+    text-align: center
+    color: $primary-text-color
+    font(2.5em, 1.2)
+    
+  &__text
+    margin-bottom: 10px
+    text-align: justify
+    color: $primary-text-color
+    font(1em, 1.2, 300)
+    
+    &:last-of-type
+      margin-bottom: 40px
+
+  &__list
+    margin-bottom: 20px
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    list-style-type: none
+    text-align: left
+    color: $primary-text-color
+    
+  &__item
+    flex-basis: 50%
+    margin-bottom: 20px
+
+    @media $tablet
+      flex-basis: 33%
+
+    @media $desktop
+      flex-basis: 25%
+
+  &__sublist
+    list-style-type: none
+
+  &__subitem
+    margin-bottom: 10px
+
+  &__image
+    margin-bottom: 10px
+
+    img
+      max-width: 100%
+
+  &__hide
+    display: none
+
+    @media $tablet-desktop
+      display: inline
+
+  &::after
+    position: absolute
+    z-index: 5
+    bottom: -35px
+    display: block
+    border-top: 35px solid $primary-color-text
+    border-right: calc(50vw - 8px) solid transparent
+    border-left: calc(50vw - 8px) solid transparent
+    content: ""
+    
+    @media $tablet-desktop
+      bottom: -70px
+      border-top-width: 70px

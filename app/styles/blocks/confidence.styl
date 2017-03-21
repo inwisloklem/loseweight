@@ -1,0 +1,95 @@
+.confidence
+  position: relative
+  padding: 40px 0
+  text-align: center
+  background-color: $primary-color-dark
+
+  padding-top: 75px
+  @media $tablet-desktop
+    padding-top: 110px
+
+  &__title
+    margin-bottom: 10px
+    text-align: center
+    color: $primary-color-text
+    font(2.5em, 1.2)
+
+  &__promo
+    margin-bottom: 10px
+    text-align: center
+    color: $primary-color-text
+    font(2em, 1.2)
+
+  &__fn
+    margin-bottom: 20px
+    text-align: center
+    color: $primary-color-text
+    font(1em, 1.2, 300)
+
+  &__hide
+    display: none
+
+    @media $tablet-desktop
+      display: inline
+
+  &__wrapper
+    display: flex
+    flex-direction: column
+    color: $primary-color-text
+    font(1em, 1.2, 200)
+
+    @media $tablet-desktop
+      flex-direction: row
+      justify-content: space-between
+
+  &__num
+    font(2em, 1.2, 500)
+    
+    @media $desktop
+      padding-left: 20px
+
+  &__block
+    margin-bottom: 20px
+    flex-basis: 100%
+    
+    display: flex
+    flex-direction: column
+    
+    @media $desktop
+      flex-basis: 33%
+      flex-direction: row
+      justify-content: center
+      align-items: center
+      text-align: left
+      
+  &__desc
+    @media $tablet
+      padding-left: 10px
+
+    @media $desktop
+      padding-left: 20px
+
+  &__divider
+    margin-bottom: 20px
+
+  &__btn
+    margin-bottom: 40px
+    display: inline-block
+
+  &__map
+    img
+      max-width: 100%
+
+  &::after
+    position: absolute
+    z-index: 5
+    bottom: -35px
+    display: block
+    border-top: 35px solid $primary-color-dark
+    border-right: calc(50vw - 8px) solid transparent
+    border-left: calc(50vw - 8px) solid transparent
+    content: ""
+    
+    @media $tablet-desktop
+      bottom: -70px
+      border-top-width: 70px

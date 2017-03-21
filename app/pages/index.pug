@@ -1,0 +1,345 @@
+doctype html
+
+html(lang = "ru")
+  include parts/head.pug
+
+  body
+    include parts/svg-sprite.pug
+
+    header
+      section.statistics
+        ul.statistics__list
+          li.statistics__item Посетителей сегодня: #[strong.statistics__num 2338]
+          li.statistics__item Сейчас на сайте: #[strong.statistics__num 65]
+          li.statistics__item Заявок сегодня: #[strong.statistics__num 106]
+
+      section.logotype
+        .logotype__image
+          img(src = "img/image-bormental.png", alt = "Доктор Борменталь")
+
+    main
+      section.intro
+        .container
+          h2.intro__title
+            span.intro__stripe Поможем Вам похудеть на 10 кг за 30 дней
+          h2.intro__title
+            span.intro__stripe с помощью уникальной методики
+          h2.intro__title
+            span.intro__stripe "Доктор Борменталь"
+
+          p.intro__fn * Теперь в городе #[strong.intro__mark Санкт-Петербурге] у Вас появилась уникальная возможность похудеть по этой методике
+
+          .intro__wrapper
+            ul.intro__list
+              li.intro__item 100% естественный безопасный эффект
+              li.intro__item Потерянные кг не вернутся
+              li.intro__item Без жёстких диет и тяжёлых тренировок
+
+            .form.intro__form
+              h3.form__title Заполните форму,
+              p.form__text чтобы получить #[strong.form__mark бесплатный] пошаговый план похудения по авторской методике 
+
+              form.form__form(action = "#", method = "post")
+                input.form__name(type = "text", name = "name", placeholder = "Введите Ваше имя")
+                input.form__tel(type = "tel", name = "phone", placeholder = "Введите Ваш телефон")
+
+                button.btn.form__btn(type = "submit") Начать худеть
+
+              p.form__fn * Мы уже помогли похудеть #[strong.form__mark 21378] людям в Петербурге
+
+      section.example
+        .container
+          h2.example__title Посмотрите на тех, кто уже похудел при помощи системы "Доктор Борменталь"
+          p.example__text #[strong.example__mark Реальные отзывы — реальные результаты!] Нажмите на стрелочку, чтобы просмотреть следующую историю
+
+          .slider.example__slider
+            .slider__wrapper
+              figure.slider__image
+                img(src = "img/image-example-1-before.jpg", alt = "Фотография до")
+                figcaption.slider__desc До (120 кг)
+              .slider__weight -25 кг
+              figure.slider__image
+                img(src = "img/image-example-1-after.jpg", alt = "Фотография после")
+                figcaption.slider__desc После (95 кг)
+
+            .slider__quote Через год я стала легче на 25 кг. В первые месяцы вес уходил легко
+            cite.slider__name Елена, Москва
+
+            p.slider__text Понимая, что процесс набора веса прогрессирует, я, конечно, пыталась худеть. Занятия в фитнес-зале и дыхательная гимнастика без изменений в питании никаких результатов не давали. Ходила на приём к диетологам, ложилась в санаторий для снижения веса. Удавалось сбросить не больше 10 кг, а потом за год набирала в два раза больше.
+
+            p.slider__text Было тяжело передвигаться: я, любительница ходить пешком и путешествовать, не могла себе позволить ни одной пешей экскурсии, опасаясь задерживать группу. Появилось множество болезней. И врачи в один голос говорили, что надо снижать вес!
+
+            p.slider__text Один врач порекомендовал центр снижения веса «Доктор Борменталь». Я посмотрела их сайт, программы «Я худею!», и появилась надежда, что я тоже смогу. Очень благодарна специалистам, которые грамотно и зажигательно доносят всё, что нужно знать о борьбе с лишним весом. К тому же занятия ведутся групповые, и в сотоварищах по лишнему весу находишь и поддержку, и обмен опытом. Да и всегда, приходя в центр «Доктор Борменталь», я чувствовала понимание и поддержку.
+
+            p.slider__text Через год я стала легче на 25 кг. В первые месяцы программы вес уходил легко, потом — немного сложнее. Мне ещё предстоит путь к намеченному результату, но я довольна и намерена ещё потрудиться. Чувствую себя гораздо лучше, легче и радостнее. Если раньше я не могла пройти мимо неправильной еды, то теперь даже смотреть на неё не хочется.
+
+            p.slider__text От души желаю страдающим избыточным весом не терять время и приходить в центр снижения веса «Доктор Борменталь». У вас всё получится!
+
+          a.btn.example__btn(href = "#") Хочу такой же результат!
+
+      section.results
+        .container
+          h2.results__title Результаты наших звёздных клиенток
+
+          .results__block
+            figure.results__image
+              img(src = "img/results-image-1.jpg", width = 178, height = 178, alt = "Ангелина Вовк")
+            .results__wrapper
+              q.results__quote Теперь я выгляжу и чувствую себя на 20 лет моложе
+              cite.results__name Ангелина Вовк
+              p.results__desc Телеведущая
+            .results__video
+              img(src="img/image-placeholder.jpg")
+          .results__block
+            figure.results__image
+              img(src = "img/results-image-2.jpg", width = 178, height = 178, alt = "Елена Ваенга")
+            .results__wrapper
+              q.results__quote Правильнее всего худеть по Борменталю
+              cite.results__name Елена Ваенга
+              p.results__desc Телеведущая
+            .results__video
+              img(src="img/image-placeholder.jpg")
+          .results__block
+            figure.results__image
+              img(src = "img/results-image-3.jpg", width = 178, height = 178, alt = "Юлия Костюшкина")
+            .results__wrapper
+              q.results__quote Я постройнела и моё тело снова мне нравится
+              cite.results__name Юлия Костюшкина
+              p.results__desc Телеведущая
+            .results__video
+              img(src="img/image-placeholder.jpg")
+
+        a.btn.results__btn(href = "#") Хочу начать худеть!
+
+      section.about
+        .container
+          h2.about__title Авторская методика "Доктор Борменталь" поможет Вам уже в первые 10 дней
+
+          ul.about__list
+            li.about__item.about__item--icon-1 Стать снова красивой и начать привлекать внимание мужчин
+            li.about__item.about__item--icon-2 Сбросить вес навсегда без возврата
+            li.about__item.about__item--icon-3 После родов быстро похудеть и вернуть своё тело в прежнюю форму
+            li.about__item.about__item--icon-4 Перестать стесняться своего тела и избавиться от неуверенность в обществе
+            li.about__item.about__item--icon-5 Избавиться навсегда от одышки, болей в спине и суставах, отеков, повышенного давления, депрессий
+            li.about__item.about__item--icon-6 Не потерять любимого мужчину из-за своей фигуры
+
+        a.btn.about__btn(href = "#") Узнать о методике #[span.about__hide "Доктор Борменталь"]
+
+      section.confidence
+        .container
+          h2.confidence__title Почему Вы можете нам доверять?
+
+          h3.confidence__promo Доктор Борменталь — центр по снижению веса номер 1 в России
+          p.confidence__fn * По результатам исследования "ТОИ — Опинион энд маркетинг рисеч"
+
+          hr.divider.confidence__divider
+
+          .confidence__wrapper
+            .confidence__block
+              .confidence__num 15
+              .confidence__desc лет мы помогли сбросить избыточный вес более чем
+            .confidence__block
+              .confidence__num 427 825
+              .confidence__desc тысячам наших клиентов
+            .confidence__block
+              .confidence__num 61
+              .confidence__desc городе России и СНГ
+
+          a.btn.confidence__btn(href = "#") Сертификат #[span.confidence__hide подтверждающий количество похудевших]
+
+          .confidence__map
+            img(src = "img/confidence-image.png", alt = "Карта городов")
+
+      section.massm
+        .container
+          h2.massm__title О нас постоянно говорят самые крупные СМИ России
+
+          p.massm__text Наши специалисты являются постоянными экспертами популярных теле- и радиопередач. Ежемесячно на главных каналах выходят 10-15 эфиров с участием специалистов центра «Доктор Борменталь» в самых популярных программах.
+
+          p.massm__text  «Я худею!» на НТВ: еженедельно по субботам в 13:20 выходит реалити-фильм — история реального похудения, рассказывающая о том, как участники проекта снижают вес в клиниках «Доктор Борменталь» под руководством наших специалистов.
+
+          ul.massm__list
+            li.massm__item
+              .massm__image
+                img(src = "img/image-massm-1.png", alt = "Первый канал")
+              ul.massm__sublist
+                li.massm__subitem «Время обедать»
+                li.massm__subitem «Контрольная закупка»
+                li.massm__subitem «Здоровье с Еленой Малышевой»
+                li.massm__subitem «Доброго здоровьица»
+                li.massm__subitem «Утро»
+            li.massm__item
+              .massm__image
+                img(src = "img/image-massm-2.png", alt = "НТВ")
+              ul.massm__sublist
+                li.massm__subitem «Я худею»
+                li.massm__subitem «Контрольная закупка»
+                li.massm__subitem «Говорим и показываем»
+                li.massm__subitem «Жизнь как песня»
+                li.massm__subitem «НТВ утром»
+            li.massm__item
+              .massm__image
+                img(src = "img/image-massm-3.png", alt = "РЕН ТВ")
+              ul.massm__sublist
+                li.massm__subitem «Тайны мира с Анной Чапман»
+                li.massm__subitem «Нам и не снилось»
+                li.massm__subitem «Пища богов»
+            li.massm__item
+              .massm__image
+                img(src = "img/image-massm-4.png", alt = "ТВ Центр")
+              ul.massm__sublist
+                li.massm__subitem «Настроение»
+                li.massm__subitem «Доктор И»
+                li.massm__subitem «Без обмана»
+            li.massm__item
+              .massm__image
+                img(src = "img/image-massm-5.png", alt = "МТВ")
+              ul.massm__sublist
+                li.massm__subitem «Каникулы в Мексике»
+            li.massm__item
+              .massm__image
+                img(src = "img/image-massm-6.png", alt = "Россия-1")
+              ul.massm__sublist
+                li.massm__subitem «О самом главном»
+                li.massm__subitem «Прямой эфир»
+                li.massm__subitem «Утро России»
+            li.massm__item
+              .massm__image
+                img(src = "img/image-massm-7.png", alt = "Радио")
+              ul.massm__sublist
+                li.massm__subitem Радио Маяк
+                li.massm__subitem Вести ФМ
+                li.massm__subitem Коммерсант ФМ
+                li.massm__subitem Сити ФМ
+            li.massm__item
+              .massm__image
+                img(src = "img/image-massm-8.png", alt = "Санкт-Перербург")
+              ul.massm__sublist
+                li.massm__subitem «Хорошее утро»
+
+          .massm__wrapper
+            .massm__image
+            p.massm__text По нашим методикам успешно похудели героини программы "Я худею на НТВ"
+
+          a.btn.massm__btn(href = "#") Начать худеть  #[span.massm__hide с "Доктор Борменталь"]
+
+      section.recommend
+        .container
+          h2.recommend__title Нас поддерживают и рекомендуют звёзды
+
+          ul.recommend__list
+            ul.recommend__item
+              img(src = "img/image-recommend-1.jpg", alt = "1")
+            ul.recommend__item
+              img(src = "img/image-recommend-2.jpg", alt = "2")
+            ul.recommend__item
+              img(src = "img/image-recommend-3.jpg", alt = "3")
+            ul.recommend__item
+              img(src = "img/image-recommend-4.jpg", alt = "4")
+            ul.recommend__item
+              img(src = "img/image-recommend-5.jpg", alt = "5")
+            ul.recommend__item
+              img(src = "img/image-recommend-6.jpg", alt = "6")
+            ul.recommend__item
+              img(src = "img/image-recommend-7.jpg", alt = "7")
+            ul.recommend__item
+              img(src = "img/image-recommend-8.jpg", alt = "8")
+            ul.recommend__item
+              img(src = "img/image-recommend-9.jpg", alt = "9")
+            ul.recommend__item
+              img(src = "img/image-recommend-10.jpg", alt = "10")
+            ul.recommend__item
+              img(src = "img/image-recommend-11.jpg", alt = "11")
+            ul.recommend__item
+              img(src = "img/image-recommend-12.jpg", alt = "12")
+            ul.recommend__item
+              img(src = "img/image-recommend-13.jpg", alt = "13")
+            ul.recommend__item
+              img(src = "img/image-recommend-14.jpg", alt = "14")
+            ul.recommend__item
+              img(src = "img/image-recommend-15.jpg", alt = "15")
+
+      section.specialists
+        .container
+          h2.specialists__title Наши специалисты публикуют свои статьи в известных популярных журналах
+
+          ul.specialists__list
+            li.specialists__item
+              figure.specialists__image
+                img(src = "img/image-specialists-1.jpg", width = 150, height = 200, alt = "Худеем правильно")
+                figcaption.specialists__desc Худеем правильно
+            li.specialists__item
+              figure.specialists__image
+                img(src = "img/image-specialists-2.jpg", width = 150, height = 200, alt = "Женское здоровье")
+                figcaption.specialists__desc Женское здоровье
+            li.specialists__item
+              figure.specialists__image
+                img(src = "img/image-specialists-3.jpg", width = 150, height = 200, alt = "Всё для женщин")
+                figcaption.specialists__desc Всё для женщин
+            li.specialists__item
+              figure.specialists__image
+                img(src = "img/image-specialists-4.jpg", width = 150, height = 200, alt = "Женские советы")
+                figcaption.specialists__desc Женские советы
+            li.specialists__item
+              figure.specialists__image
+                img(src = "img/image-specialists-5.jpg", width = 150, height = 200, alt = "Здоровье")
+                figcaption.specialists__desc Здоровье
+
+          a.btn.specialists__btn(href = "#") Получить консультацию #[span.specialists__hide специалиста]
+
+      section.authors
+        .container
+          h2.authors__title Авторы методики "Доктор Борменталь"
+
+          p.authors__text #[strong.authors__name Андрей Бобровский] — известнейший в России диетолог, основатель самого крупного в стране специализированного центра похудения «Доктор Борменталь» и автор одноименного метода похудения.
+
+          .authors__wrapper
+            figure.authors__image
+              img(src = "img/image-authors-1.png", alt = "Андрей Бобровский")
+            ul.authors__list
+              li.authors__item Окончил Государственный медицинский университет в г. Томске
+              li.authors__item Подготовил и защитил диссертацию на соискание кандидатской ученой степени в медицине по теме "Индивидуально-типологические особенности личности при адаптации к снижению избыточной массы тела"
+              li.authors__item Ведёт медицинскую практику по психотерапии и диетологии
+              li.authors__item Принял участие на правах соавтора в создании уникального методического пособия для российских врачей по психотерапии лишнего веса (пособие является единственным по данному вопросу в России)
+              li.authors__item Участник проекта "Я худею!" на телеканале НТВ в качестве медицинского эксперта-диетолога
+              li.authors__item Статьи доктора печатают крупнейшие популярные и специализированные издания
+              li.authors__item Принимает участие в солидных научных конференциях международного масштаба по изучению ожирения
+              li.authors__item Автор книг «100 рецептов стройности», «Как победить аппетит?», «Эффективная программа похудения за 7 дней», «Как похудеть и сохранить стройность», «Современные методы снижения веса», «Рецепты стройности», «Думайте и стройнейте», «Лишний вес из головы», «Дневник Питания «Доктор Борменталь», «Энциклопедия вкусных и здоровых блюд»
+
+          hr.divider.divider--dark.authors__divider
+
+          p.authors__text #[strong.authors__name Андрей Князьков] — является главным врачом Санкт-Петербургского центра "Доктор Борменталь". Эксперт проекта «Я худею!» на телеканале НТВ!
+
+          .authors__wrapper.authors__wrapper--reverse
+            figure.authors__image
+              img(src = "img/image-authors-2.png", alt = "Андрей Князьков")
+            ul.authors__list
+              li.authors__item Выпускник Санкт-Петербургского медицинского университета имени И. П. Павлова по специальности «лечебное дело»
+              li.authors__item Прошёл обучение в аспирантуре на кафедре клинической психологии РГПУ им. А. И. Герцена
+              li.authors__item Прошёл интернатуру и профессиональную переподготовку по специальностям: «психиатрия», «наркология», «психотерапия»
+              li.authors__item Имеет десятилетний опыт индивидуальной и групповой психотерапии зависимых состояний и психосоматических заболеваний
+              li.authors__item Прошёл профессиональную переподготовку в ВолгГМУ по специальности «организация здравоохранения и общественного здоровья»
+              li.authors__item Начал свою работу центре «Доктор Борменталь» в 2007 году. Является главным врачом Санкт-Петербургского центра, руководителем Ростовского, Волгоградского и Оренбургского филиалов
+              li.authors__item Автор тренинга «Школа стервы»
+              li.authors__item Им опубликован ряд научных статей и публикаций, посвященных психотерапии избыточного веса
+
+          a.btn.authors__btn(href = "#") Задать вопрос специалистам
+
+      section.logotype
+        .logotype__image
+          img(src = "img/image-bormental.png", alt = "Доктор Борменталь")
+
+      section.modal-form
+        .form.intro__form
+          h3.form__title Заполните форму,
+          p.form__text чтобы получить #[strong.form__mark бесплатный] пошаговый план похудения по авторской методике 
+
+          form.form__form(action = "#", method = "post")
+            input.form__name(type = "text", name = "name", placeholder = "Введите Ваше имя")
+            input.form__tel(type = "tel", name = "phone", placeholder = "Введите Ваш телефон")
+
+            button.btn.form__btn(type = "submit") Начать худеть
+
+          p.form__fn * Мы уже помогли похудеть #[strong.form__mark 21378] людям в Петербурге
+
+    script(src = "js/modal.js")

@@ -1,0 +1,65 @@
+.specialists
+  position: relative
+  padding: 40px 0
+  text-align: center
+  background-color: $primary-color
+
+  padding-top: 75px
+  @media $tablet-desktop
+    padding-top: 110px
+
+  &__title
+    margin-bottom: 20px
+    text-align: center
+    color: $primary-color-text
+    font(2.5em, 1.2)
+    
+  &__list
+    margin-bottom: 40px
+    list-style-type: none
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    @media $tablet-desktop
+      flex-direction: row
+      flex-wrap: wrap
+
+      justify-content: flex-start
+
+  &__item
+    flex-basis: 100%
+
+    @media $tablet
+      flex-basis: 33%
+
+    @media $desktop
+      flex-basis: 20%
+
+  &__desc
+    margin-bottom: 20px
+    color: $primary-color-text
+    font(1em, 1.2, 500)
+
+  &__hide
+    display: none
+
+    @media $tablet-desktop
+      display: inline
+
+  &__btn
+    display: inline-block
+
+  &::after
+    position: absolute
+    z-index: 5
+    bottom: -35px
+    display: block
+    border-top: 35px solid $primary-color
+    border-right: calc(50vw - 8px) solid transparent
+    border-left: calc(50vw - 8px) solid transparent
+    content: ""
+    
+    @media $tablet-desktop
+      bottom: -70px
+      border-top-width: 70px

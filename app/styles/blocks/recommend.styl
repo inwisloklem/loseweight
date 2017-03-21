@@ -1,0 +1,51 @@
+.recommend
+  position: relative
+  padding: 40px 0
+  text-align: center
+  background-color: $primary-color-dark
+
+  padding-top: 75px
+  @media $tablet-desktop
+    padding-top: 110px
+
+  &__title
+    margin-bottom: 20px
+    text-align: center
+    color: $primary-color-text
+    font(2.5em, 1.2)
+    
+  &__list
+    list-style-type: none
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: flex-start
+    font-size: 0
+
+  &__item
+    box-sizing: border-box
+    flex-basis: 50%
+    border: 5px solid transparent
+
+    @media $tablet
+      flex-basis: 33%
+
+    @media $desktop
+      flex-basis: 20%
+
+    img
+      max-width: 100%
+
+  &::after
+    position: absolute
+    z-index: 5
+    bottom: -35px
+    display: block
+    border-top: 35px solid $primary-color-dark
+    border-right: calc(50vw - 8px) solid transparent
+    border-left: calc(50vw - 8px) solid transparent
+    content: ""
+    
+    @media $tablet-desktop
+      bottom: -70px
+      border-top-width: 70px

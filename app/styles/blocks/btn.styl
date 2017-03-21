@@ -1,0 +1,23 @@
+.btn
+  box-sizing: border-box
+  padding: 10px 20px
+  // width: 100%
+  border: none
+  border-bottom: 4px solid $accent-color-dark
+  color: $primary-color-text
+  background-color: $accent-color
+  text-decoration: none
+  font-family: $font-title
+  font(1.5em, 1.2, 200)
+
+  transition: all 0.4s ease-in-out
+
+  @media $tablet-desktop
+    // width: 100%
+    // width: 400px
+
+  &:hover
+    border-bottom: 4px solid $accent-color
+    background-color: $accent-color-dark
+
+    transition: all 0.4s ease-in-out

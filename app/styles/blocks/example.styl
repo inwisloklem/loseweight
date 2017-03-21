@@ -1,0 +1,36 @@
+.example
+  position: relative
+  padding: 40px 0
+  text-align: center
+
+  &__title
+    margin-bottom: 20px
+    text-align: center
+    color: $primary-text-color
+    font(2.5em, 1.2)
+
+  &__text
+    margin-bottom: 40px
+    text-align: center
+    color: $primary-text-color
+    font(1em, 1.2, 300)
+    
+  &__slider
+    margin-bottom: 20px
+
+  &__btn
+    display: inline-block
+
+  &::after
+    position: absolute
+    z-index: 5
+    bottom: -35px
+    display: block
+    border-top: 35px solid $primary-color-text
+    border-right: calc(50vw - 8px) solid transparent
+    border-left: calc(50vw - 8px) solid transparent
+    content: ""
+    
+    @media $tablet-desktop
+      bottom: -70px
+      border-top-width: 70px
