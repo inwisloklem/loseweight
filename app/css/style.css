@@ -1061,7 +1061,7 @@ ul {
   box-sizing: border-box;
   padding: 20px;
   text-align: left;
-  border: 2px solid #212121;
+  background-color: #d5e2f8;
 }
 @media (min-width: 1100px) {
   .slider {
